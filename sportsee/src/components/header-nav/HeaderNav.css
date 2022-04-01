@@ -1,0 +1,13 @@
+.headerNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 90px;
+    padding: 0 10px;
+}
+
+.headerNav img{
+    height: 60px;
+}
