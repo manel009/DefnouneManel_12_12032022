@@ -1,7 +1,11 @@
 import React from "react";
+import './Home.css';
 
-export default function Home() {
+export default function Home(){
     return (
-         <h1> HOME PAGE </h1>
+        <div className="dashboard">
+             <h1>HOME PAGE Sportsee</h1>
+        </div>
+       
     );
 }

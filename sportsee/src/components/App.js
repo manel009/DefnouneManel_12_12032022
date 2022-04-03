@@ -9,11 +9,13 @@ function App() {
   return (
     <div className="App">
       <HeaderNav />
+      <div className="container">
       <Sidebar />
     <Routes>
       <Route path="/" element={<Home />}/>
       <Route path="*" element={<Error404 />} />
     </Routes>
+    </div>
     </div>
   );
 }
