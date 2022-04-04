@@ -1,0 +1,29 @@
+.dashboardKeyData{
+    display: flex;
+    flex-direction: column;
+}
+.keyDataCard{
+    background: #FBFBFB;
+    width : 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+}
+
+.keyDataCard img{
+    width : 60px;
+}
+
+.keyDataText{
+    min-width: 50%;
+}
+
+.keyDataCard p{
+    font-size: 12px;
+}
+
+.keyDataTitle {
+    font-weight: bold;
+}
