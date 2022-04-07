@@ -1,20 +1,22 @@
 import React, {useState} from "react";
+import { useParams } from "react-router-dom";
 import './Home.css';
 import UserActivityService from '../../services/UserActivityService.js';
 import KeyData from "../key-data/KeyData";
+import AverageSession from "../graphs/average-session/AverageSession"
 
 export default function Home(){
     const [userData, setUserData] = useState(null);
+    const params = useParams();
 
     if(userData === null){
-        UserActivityService.getUser(18).then(
+        UserActivityService.getUser(params.idUser).then(
             data => {
                 console.log(data);
                 setUserData(data);
             }
         )
     }
-    
 
     return (
         <>
@@ -27,6 +29,7 @@ export default function Home(){
 
                     <div className="dashboardContent">
                         <div className="dashboardGraphs">
+                            <AverageSession idUser={params.idUser}></AverageSession>
                         </div>
                         <div className="dashboardKayDatas">
                             <KeyData keyData={userData.data.keyData}></KeyData>

@@ -12,7 +12,7 @@ function App() {
       <div className="container">
       <Sidebar />
     <Routes>
-      <Route path="/" element={<Home />}/>
+      <Route path="/:idUser" element={<Home />}/>
       <Route path="*" element={<Error404 />} />
     </Routes>
     </div>
