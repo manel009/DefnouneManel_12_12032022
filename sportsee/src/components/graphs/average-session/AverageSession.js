@@ -10,7 +10,6 @@ export default function AverageSession(props){
     if(userData === null){
         UserActivityService.getUserAverageSession(props.idUser).then(
             data => {
-                console.log(data);
                 setUserData(data);
             }
         )
