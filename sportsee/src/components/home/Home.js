@@ -32,6 +32,7 @@ export default function Home(){
                     <div className="dashboardContent">
                         <div className="dashboardGraphs">
                             <div className="graphActivity">
+                                <h3>Activité quotidienne</h3>
                                 <Activity idUser={params.idUser}></Activity>
                             </div>
                             <div className="secondLineGraphs">
@@ -42,6 +43,9 @@ export default function Home(){
                                     <Perfomance idUser={params.idUser}></Perfomance>
                                 </div>
                                 <div className="graphScore">
+                                    <h3>Score</h3>
+                                    <h4> {userData.data.score * 100}% </h4>
+                                    <p> de votre objectif</p>
                                     <Score score={userData.data.score}></Score>
                                 </div>
                             </div>

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import UserActivityService from '../../../services/UserActivityService.js';
 import './Activity.css';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, Label } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 
 
@@ -32,12 +32,36 @@ export default function Activity(props){
                 }}
               >
                 <XAxis dataKey="day" fontSize={10}>
-                    <Label value="Activité quotidienne" position="insideTop" offset={-155} />
                 </XAxis>
                 <YAxis fontSize={10} orientation="right"> 
                 </YAxis>
-                <Tooltip />
-                <Legend verticalAlign="top" align="right" height={50} iconType="circle" />
+                <Tooltip
+                    labelStyle={{ display: "none" }}
+                    separator=""
+                    contentStyle={{ backgroundColor: "#E60000"}}
+                    itemStyle={{ color: "white", fontWeight:"bold", backgroundColor: "#E60000"}}
+                    formatter={function(value, name) {
+                        if(name === "kilogram"){
+                            return [`${value} kg`,""];
+                        } else {
+                            return [`${value} kCal`,""];
+                        }
+                    }}
+                    
+                />
+                <Legend 
+                verticalAlign="top" 
+                align="right" 
+                iconType="circle" 
+                height={50}
+                wrapperStyle={{fontSize:"12px"}}
+                formatter={function(value, entry) {
+                    if(value === "kilogram"){
+                        return `Poids (kg)`;
+                    } else {
+                        return "Calories brûlées (kCal)";
+                    }
+                }}/>
                 <Bar dataKey="kilogram" fill="#000000" maxBarSize={5}/>
                 <Bar dataKey="calories" fill="#E60000" maxBarSize={5}/>
               </BarChart>

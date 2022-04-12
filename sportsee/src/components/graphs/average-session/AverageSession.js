@@ -59,7 +59,14 @@ export default function AverageSession(props){
                     <XAxis dataKey="day" stroke="#ffffff">
                         <Label value="Durée moyenne des sessions" position="insideTop" fillOpactity={0.5} offset={-170} style={{ color: 'white', fill: 'white' }} />
                     </XAxis>
-                    <Tooltip />
+                    <Tooltip
+                        labelStyle={{ display: "none" }}
+                        separator=""
+                        itemStyle={{ color: "black", fontWeight:"bold" }}
+                        formatter={function(value, name) {
+                        return [`${value} min`,""];
+                        }}
+                    />
                     <Line type="monotone" dataKey="sessionLength" stroke="#ffffff" />
                 </LineChart>
                 </ResponsiveContainer>
