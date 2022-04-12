@@ -12,7 +12,6 @@ export default function Score(props){
     data.name = "Score";
     data.fill = "#E60000";
     dataScore.push(data);
-    console.log(dataScore)
 
     return (
         <>
