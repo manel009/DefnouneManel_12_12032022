@@ -7,15 +7,15 @@ import Sidebar from "./sidebar/Sidebar";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <HeaderNav />
       <div className="container">
-      <Sidebar />
-    <Routes>
-      <Route path="/:idUser" element={<Home />}/>
-      <Route path="*" element={<Error404 />} />
-    </Routes>
-    </div>
+        <Sidebar />
+        <Routes>
+          <Route path="/:idUser" element={<Home />}/>
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </div>
     </div>
   );
 }

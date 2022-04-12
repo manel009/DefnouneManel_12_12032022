@@ -1,8 +1,15 @@
 .dashboard{
+    width: 100%;
     margin-top: 30px;
-    padding-left: 126px;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.dashboardHeader{
+    width: 100%;
+}
 .userName{
     color: red;
 }
@@ -10,51 +17,52 @@
 .dashboardContent{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
 }
 
 .dashboardGraphs{
     width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .graphActivity{
     width: 100%;
-    height: 250px;
+    height: 45%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .secondLineGraphs{
     width: 100%;
-    height: 250px;
+    height: 45%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .graphAverage{
-    width: 30%;
-    height: 300px;
+    width: 33%;
     background-color: red;
     border-radius: 10px;
 }
 
 .graphPerformance{
-    width: 30%;
-    height: 300px;
+    width: 33%;
     background-color: #282D30;
     border-radius: 10px;
     overflow: auto;
 }
 
 .graphScore{
-    width: 30%;
-    height: 300px;
+    width: 33%;
     background: #FBFBFB;
     border-radius: 10px;
 }
 
 .dashboardKayDatas{
     width: 20%;
+    padding-right: 10px;
 }

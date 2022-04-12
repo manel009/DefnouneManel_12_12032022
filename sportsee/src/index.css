@@ -23,8 +23,16 @@ a:link, a:visited, a:hover,  a:active {
   text-decoration: none;
 }
 
+.app{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .container{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 }

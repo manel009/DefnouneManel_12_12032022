@@ -2,6 +2,6 @@ import React from "react";
 
 export default function Error404(){
     return (
-        <h1>404</h1>
+        <h1>Page introuvable ou indisponible pour le moment :(</h1>
     );
 }

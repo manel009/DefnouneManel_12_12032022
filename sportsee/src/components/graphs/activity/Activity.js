@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import UserActivityService from '../../../services/UserActivityService.js';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import './Activity.css';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, Label } from 'recharts';
 
 
 
@@ -22,17 +23,21 @@ export default function Activity(props){
             <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                 data={userData}
+                isAnimationActive={false}
                 margin={{
-                  top: 5,
-                  right: 30,
-                  left: 20,
-                  bottom: 5,
+                  top: 10,
+                  right: 10,
+                  left: 10,
+                  bottom: 15,
                 }}
               >
-                <XAxis dataKey="day" />
-                <YAxis />
+                <XAxis dataKey="day" fontSize={10}>
+                    <Label value="Activité quotidienne" position="insideTop" offset={-155} />
+                </XAxis>
+                <YAxis fontSize={10} orientation="right"> 
+                </YAxis>
                 <Tooltip />
-                <Legend />
+                <Legend verticalAlign="top" align="right" height={50} iconType="circle" />
                 <Bar dataKey="kilogram" fill="#000000" maxBarSize={5}/>
                 <Bar dataKey="calories" fill="#E60000" maxBarSize={5}/>
               </BarChart>

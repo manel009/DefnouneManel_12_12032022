@@ -30,7 +30,7 @@ export default function Performance(props){
         <>
             { userData != null ?
             <ResponsiveContainer width="100%" height="100%" >
-                <RadarChart data={userData} cx="50%" cy="50%" outerRadius="50%">
+                <RadarChart data={userData} cx="50%" cy="50%" outerRadius="35%">
                 <PolarGrid/>
                 
                 <Radar

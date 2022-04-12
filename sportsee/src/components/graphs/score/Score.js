@@ -1,5 +1,5 @@
 import React from "react";
-import { RadialBarChart, RadialBar, PolarAngleAxis } from 'recharts';
+import { RadialBarChart, RadialBar, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 
 
 
@@ -17,13 +17,12 @@ export default function Score(props){
     return (
         <>
             { props.score != null ?
+             <ResponsiveContainer width="100%" height="100%">
                 <RadialBarChart
-                width={500}
-                height={300}
-                cx={150}
-                cy={150}
-                innerRadius={100}
-                outerRadius={140}
+                cx="50%"
+                cy="50%"
+                innerRadius={90}
+                outerRadius={110}
                 barSize={10}
                 data={dataScore}
                 startAngle={90} 
@@ -42,6 +41,7 @@ export default function Score(props){
                   clockWise="false"
                 />
               </RadialBarChart>
+              </ResponsiveContainer>
             :
              <h1> Loading ... </h1>
             }
