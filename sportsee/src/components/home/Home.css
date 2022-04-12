@@ -1,14 +1,60 @@
 .dashboard{
-    margin-left: 146px;
     margin-top: 30px;
-
+    padding-left: 126px;
 }
 
 .userName{
     color: red;
 }
 
+.dashboardContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dashboardGraphs{
+    width: 75%;
+}
+
+.graphActivity{
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.secondLineGraphs{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.graphAverage{
+    width: 30%;
+    height: 300px;
+    background-color: red;
+    border-radius: 10px;
+}
+
+.graphPerformance{
+    width: 30%;
+    height: 300px;
+    background-color: #282D30;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.graphScore{
+    width: 30%;
+    height: 300px;
+    background: #FBFBFB;
+    border-radius: 10px;
+}
 
 .dashboardKayDatas{
-    width: 260px;
+    width: 20%;
 }

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import UserActivityService from '../../../services/UserActivityService.js';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 
 
 export default function Performance(props){
@@ -29,25 +29,20 @@ export default function Performance(props){
     return (
         <>
             { userData != null ?
-                <RadarChart
-                cx={300}
-                cy={250}
-                outerRadius={150}
-                width={500}
-                height={500}
-                data={userData}
-              >
-                <PolarGrid />
-                <PolarAngleAxis dataKey="kind" />
-                <PolarRadiusAxis />
+            <ResponsiveContainer width="100%" height="100%" >
+                <RadarChart data={userData} cx="50%" cy="50%" outerRadius="50%">
+                <PolarGrid/>
+                
                 <Radar
-                  name="Mike"
+                  name="Performance"
                   dataKey="value"
-                  stroke="#8884d8"
-                  fill="#8884d8"
+                  stroke="#E60000"
+                  fill="#E60000"
                   fillOpacity={0.6}
                 />
+                <PolarAngleAxis dataKey="kind" stroke="#ffffff" width={50}/>
               </RadarChart>
+              </ResponsiveContainer>
             :
              <h1> Loading ... </h1>
             }

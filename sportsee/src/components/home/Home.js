@@ -6,6 +6,7 @@ import KeyData from "../key-data/KeyData";
 import AverageSession from "../graphs/average-session/AverageSession";
 import Perfomance from "../graphs/performance/Performance";
 import Score from "../graphs/score/Score";
+import Activity from "../graphs/activity/Activity";
 
 export default function Home(){
     const [userData, setUserData] = useState(null);
@@ -30,9 +31,20 @@ export default function Home(){
 
                     <div className="dashboardContent">
                         <div className="dashboardGraphs">
-                            <AverageSession idUser={params.idUser}></AverageSession>
-                            <Perfomance idUser={params.idUser}></Perfomance>
-                            <Score score={userData.data.score}></Score>
+                            <div className="graphActivity">
+                                <Activity idUser={params.idUser}></Activity>
+                            </div>
+                            <div className="secondLineGraphs">
+                                <div className="graphAverage">
+                                    <AverageSession idUser={params.idUser}></AverageSession>
+                                </div>
+                                <div className="graphPerformance">
+                                    <Perfomance idUser={params.idUser}></Perfomance>
+                                </div>
+                                <div className="graphScore">
+                                    <Score score={userData.data.score}></Score>
+                                </div>
+                            </div>
                         </div>
                         <div className="dashboardKayDatas">
                             <KeyData keyData={userData.data.keyData}></KeyData>

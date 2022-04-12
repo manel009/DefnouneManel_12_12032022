@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import UserActivityService from '../../../services/UserActivityService.js';
-import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import { LineChart, Line, XAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 
 
@@ -18,14 +18,15 @@ export default function AverageSession(props){
     return (
         <>
             { userData != null ?
-                <LineChart width={730} height={250} data={userData.data.sessions}
+            <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={userData.data.sessions}
                 margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                    <XAxis dataKey="day" />
-                    <YAxis />
+                    <XAxis dataKey="day" stroke="#ffffff" />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" dataKey="sessionLength" stroke="#8884d8" />
+                    <Line type="monotone" dataKey="sessionLength" stroke="#ffffff" />
                 </LineChart>
+                </ResponsiveContainer>
             :
              <h1> Loading ... </h1>
             }
