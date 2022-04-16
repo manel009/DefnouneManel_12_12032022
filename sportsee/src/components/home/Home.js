@@ -8,6 +8,10 @@ import Perfomance from "../graphs/performance/Performance";
 import Score from "../graphs/score/Score";
 import Activity from "../graphs/activity/Activity";
 
+/**
+ * Home Component : get user data from the service and then display the dashboard with all informations.
+ * @returns Home component
+ */
 export default function Home(){
     const [userData, setUserData] = useState(null);
     const params = useParams();

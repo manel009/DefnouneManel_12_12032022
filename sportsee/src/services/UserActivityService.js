@@ -32,4 +32,7 @@ const UserActivityService = {
 
 };
 
+/**
+ * Service to call user activity API.
+ */
 export default UserActivityService;

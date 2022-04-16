@@ -2,7 +2,11 @@ import React from "react";
 import { RadialBarChart, RadialBar, PolarAngleAxis, ResponsiveContainer, Label } from 'recharts';
 
 
-
+/**
+ * Score component : Display the pourcentage of daily progression for a user in a circle graph using rechart library.
+ * @param {*} props 
+ * @returns 
+ */
 export default function Score(props){
 
     let dataScore = [];

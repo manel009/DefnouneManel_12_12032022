@@ -1,6 +1,11 @@
 import React from "react";
 import './KeyData.css';
 
+/**
+ * KeyData component : display calories, proteins, carbs and fat cards section in the dashboard.
+ * @param {*} props 
+ * @returns 
+ */
 export default function KeyData(props){
     return (
         <div className="dashboardKeyData">

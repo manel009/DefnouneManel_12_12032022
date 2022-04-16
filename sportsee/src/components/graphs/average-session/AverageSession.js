@@ -4,6 +4,11 @@ import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer, Label } from 'rec
 
 
 
+/**
+ * AverageSession componement : Display average session graph using rechart library.
+ * @param {*} props 
+ * @returns 
+ */
 export default function AverageSession(props){
     const [userData, setUserData] = useState(null);
 

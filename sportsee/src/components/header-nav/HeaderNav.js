@@ -2,6 +2,10 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './HeaderNav.css';
 
+/**
+ * Component HeaderNav : header with navigation through the app .
+ * @returns 
+ */
 function HeaderNav() {
     return (
     <nav className='headerNav'>

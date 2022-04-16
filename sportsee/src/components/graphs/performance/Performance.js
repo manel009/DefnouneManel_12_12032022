@@ -2,7 +2,11 @@ import React, {useState} from "react";
 import UserActivityService from '../../../services/UserActivityService.js';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 
-
+/**
+ * Performance component : Display performance graph with energy, endurance, strenght, cardio and speed using rechart library.
+ * @param {*} props 
+ * @returns 
+ */
 export default function Performance(props){
     const [userData, setUserData] = useState(null);
 

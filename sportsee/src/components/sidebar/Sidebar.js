@@ -1,6 +1,10 @@
 import React from "react";
 import './Sidebar.css'
 
+/**
+ * SideBar component : sidebar of the application. 
+ * @returns 
+ */
 export default function Sidebar(){
     return (
         <nav className="sidebar">

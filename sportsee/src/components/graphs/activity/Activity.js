@@ -5,7 +5,11 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } fro
 
 
 
-
+/**
+ * Acitivty component : Display activity graph using rechart library.
+ * @param {*} props 
+ * @returns 
+ */
 export default function Activity(props){
     const [userData, setUserData] = useState(null);
 
