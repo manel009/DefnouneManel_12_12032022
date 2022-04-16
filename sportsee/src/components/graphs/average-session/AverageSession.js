@@ -14,7 +14,6 @@ export default function AverageSession(props){
 
     const preprareGraphData = function(data){
         let valueArray = data.data.sessions;
-        console.log(data.data.sessions)
         let prepareData = [];
         for(let value of valueArray){
             let graphPoint = {};
