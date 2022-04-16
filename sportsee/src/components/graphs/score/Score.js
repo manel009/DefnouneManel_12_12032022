@@ -8,7 +8,6 @@ import { RadialBarChart, RadialBar, PolarAngleAxis, ResponsiveContainer, Label }
  * @returns 
  */
 export default function Score(props){
-
     let dataScore = [];
     let data = {};
     data.pv = 1;

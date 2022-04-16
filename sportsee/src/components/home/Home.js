@@ -48,9 +48,9 @@ export default function Home(){
                                 </div>
                                 <div className="graphScore">
                                     <h3>Score</h3>
-                                    <h4> {userData.data.score * 100}% </h4>
+                                    <h4> {userData.data.todayScore * 100}% </h4>
                                     <p> de votre objectif</p>
-                                    <Score score={userData.data.score}></Score>
+                                    <Score score={userData.data.todayScore}></Score>
                                 </div>
                             </div>
                         </div>
